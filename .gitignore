@@ -1,0 +1,11 @@
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+ci-results/
+__pycache__/
+
+# Personal preparation material stays local.
+INTERVIEW.md
+POST.md
+application-notes/

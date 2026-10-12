@@ -1,0 +1,28 @@
+{
+  "source_sha256": "5f363343f356ca38a0236baab849e472846399b2176ccc5bd686483dd8a7562f",
+  "sqlite_version": "3.49.1",
+  "controls": 12,
+  "fault_injection_checks": [
+    {
+      "control": "missing_values",
+      "injected_fault_detected": true
+    },
+    {
+      "control": "category_domains",
+      "injected_fault_detected": true
+    },
+    {
+      "control": "positive_numeric_values",
+      "injected_fault_detected": true
+    },
+    {
+      "control": "split_id_uniqueness",
+      "injected_fault_detected": true
+    },
+    {
+      "control": "source_without_split",
+      "injected_fault_detected": true
+    }
+  ],
+  "all_passed": true
+}

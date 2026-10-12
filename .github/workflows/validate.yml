@@ -1,0 +1,35 @@
+name: Validate R and SQL
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: release
+          use-public-rspm: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Ensure R dependency
+        run: Rscript -e 'if (!requireNamespace("rpart", quietly=TRUE)) install.packages("rpart", repos="https://cloud.r-project.org")'
+      - name: Run from clean inputs and verify outputs
+        run: python ci/run_checks.py
+      - name: Retain generated results and execution logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-evidence
+          path: ci-results/
+          if-no-files-found: warn
+          retention-days: 14

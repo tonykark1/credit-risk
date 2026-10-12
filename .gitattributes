@@ -1,0 +1,6 @@
+# Bundled datasets are data, not AGS source code.
+data/** linguist-vendored
+# Exclude generated outputs from source language statistics.
+results/** linguist-generated
+ci-results/** linguist-generated
+report.html linguist-generated

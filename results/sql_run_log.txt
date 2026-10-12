@@ -1,0 +1,13 @@
+PASS: source_row_count (0)
+PASS: source_id_uniqueness (0)
+PASS: missing_values (0)
+PASS: category_domains (0)
+PASS: positive_numeric_values (0)
+PASS: outcome_counts (0)
+PASS: split_id_uniqueness (0)
+PASS: split_membership (0)
+PASS: source_without_split (0)
+PASS: split_without_source (0)
+PASS: split_counts (0)
+PASS: split_outcome_balance (0)
+5 injected-fault checks passed; data restored after each test.

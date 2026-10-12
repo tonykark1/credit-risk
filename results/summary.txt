@@ -1,0 +1,6 @@
+Selected model: Logistic
+Test AUC: 0.750 (bootstrap 95%: 0.673 - 0.817)
+Test Brier: 0.1757; baseline: 0.2100
+Validation-selected threshold: 0.22; assumed FN:FP cost = 5:1
+Test cost units: 125; flag nobody: 300; flag everybody: 140
+Bad credits flagged: 48 of 60; good credits flagged: 65 of 140

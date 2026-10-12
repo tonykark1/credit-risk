@@ -1,0 +1,40 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+null device 
+          1 
+Selected model: Logistic
+Test AUC: 0.750 (bootstrap 95%: 0.673 - 0.817)
+Test Brier: 0.1757; baseline: 0.2100
+Validation-selected threshold: 0.22; assumed FN:FP cost = 5:1
+Test cost units: 125; flag nobody: 300; flag everybody: 140
+Bad credits flagged: 48 of 60; good credits flagged: 65 of 140 
+All numerical checks passed.
+                  comparison   n        PSI reference_95pct review_flag
+1            Held-out sample 200 0.02704456      0.08479685       FALSE
+2 Illustrative profile shift 200 0.72026580      0.08479685        TRUE
+  mean_score
+1  0.3135710
+2  0.4277911
+Monitoring checks passed.
+Explainability checks passed. Top validation feature: checking. Example row 1 score: 0.5822.
+     model  mean_auc   auc_p05   auc_p95 mean_brier brier_p05 brier_p95
+1 Logistic 0.7538619 0.7086071 0.8005595  0.1768785 0.1597339 0.1922381
+2     Tree 0.7059655 0.6530595 0.7424911  0.1880749 0.1744911 0.2007963
+3 Baseline 0.5000000 0.5000000 0.5000000  0.2100000 0.2100000 0.2100000
+Robustness checks passed: 50 runs; logistic Brier wins 48/50. Original test excluded.
+  missed_bad_cost  threshold    recall false_positive_rate review_share
+1               1 0.62601784 0.3333333           0.0500000        0.135
+2               2 0.42256120 0.6166667           0.2214286        0.340
+3               5 0.22835579 0.7666667           0.4285714        0.530
+4              10 0.02624113 1.0000000           0.9571429        0.970
+5              20 0.02624113 1.0000000           0.9571429        0.970
+  cost_units
+1         47
+2         77
+3        130
+4        134
+5        134
+Decision sensitivity checks passed. Original model and test metrics unchanged.

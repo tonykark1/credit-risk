@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "fresh_results": true,
+  "sql_controls": 12,
+  "fault_injections": 5,
+  "robustness_model_rows": 150,
+  "generated_charts": 5
+}
